@@ -1,0 +1,6 @@
+
+RewriteEngine On
+
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://tersu.com.br%{REQUEST_URI} [L,R=301]

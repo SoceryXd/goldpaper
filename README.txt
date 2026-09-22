@@ -9,6 +9,11 @@ Arquivos:
 
 
 
+
+OBSERVAÇÃO
+As imagens de aplicação utilizadas no site foram derivadas dos materiais comerciais enviados na conversa para fins de composição deste projeto.
+
+
 NOVA VERSÃO COM SEGMENTOS DETALHADOS
 - lavanderia.html
 - hotelaria.html

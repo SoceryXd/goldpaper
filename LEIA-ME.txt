@@ -1,9 +1,5 @@
-GOLD PAPER ULTRA PREMIUM — PROJETO HÍBRIDO
+GOLD PAPER 
 
-COMO ABRIR O SITE:
-1. Extraia este ZIP.
-2. Abra o arquivo index.html que está na RAIZ da pasta.
-3. Não é necessário terminal, Node.js, npm ou qualquer comando.
 
 ESTRUTURA:
 - index.html                 -> site pronto para abrir/publicar
@@ -12,16 +8,11 @@ ESTRUTURA:
 - supermercados.html         -> página pronta
 - cervejarias.html           -> página pronta
 - assets/                    -> CSS, JavaScript e imagens do site executável
-- source/                    -> código-fonte avançado preservado
+- source/                    -> código-fonte avançado 
    - TypeScript / TSX
    - JavaScript
    - JSON
    - Next.js / React
    - configurações do projeto
 
-IMPORTANTE:
-O navegador não executa TypeScript/TSX diretamente. Por isso, o site pronto usa os
-arquivos já convertidos para HTML/CSS/JS, enquanto o código TypeScript original fica
-preservado na pasta source para futuras edições profissionais.
 
-WhatsApp configurado: (27) 99817-9289

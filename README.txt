@@ -7,20 +7,6 @@ Arquivos:
 - assets/js/config.js
 - assets/images/*
 
-CONFIGURAÇÃO DO WHATSAPP
-Abra assets/js/config.js e troque:
-5527998179289
-por 55 + DDD + número do WhatsApp comercial, sem espaços ou símbolos.
-Exemplo: 5511987654321
-
-PUBLICAÇÃO
-Envie todos os arquivos e pastas para a pasta pública do servidor, mantendo a estrutura original.
-
-OBSERVAÇÃO
-As imagens de aplicação utilizadas no site foram derivadas dos materiais comerciais enviados na conversa para fins de composição deste projeto.
-
-
-VERSAO PREMIUM: logo oficial sem PAPEL TOALHA, GSAP, Lenis, microinteracoes, parallax, tilt e favicon Gold Paper.
 
 
 NOVA VERSÃO COM SEGMENTOS DETALHADOS

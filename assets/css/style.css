@@ -235,3 +235,194 @@
   .brand-logo-shell{width:190px;min-width:190px;height:56px;padding:7px 10px}
   .footer-logo-shell{width:210px;min-width:210px;height:62px}
 }
+
+/* Gold Paper — Soluções Bento Premium v4 */
+#solucoes{background:radial-gradient(circle at 10% 0%,#fff 0,#f7f3ea 38%,#efe9dc 100%);position:relative;overflow:hidden}
+#solucoes:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(202,165,77,.14);right:-260px;top:70px;box-shadow:0 0 0 70px rgba(202,165,77,.025),0 0 0 140px rgba(202,165,77,.018)}
+.solution-grid-premium{grid-template-columns:1.18fr .82fr .82fr;grid-auto-rows:330px;gap:16px;position:relative}
+.solution-grid-premium .solution-card{min-height:0;height:100%;padding:30px;border-radius:26px;box-shadow:0 18px 55px rgba(45,35,14,.07);border:1px solid rgba(163,145,105,.2)}
+.solution-grid-premium .solution-card:hover{transform:translateY(-5px);box-shadow:0 26px 70px rgba(45,35,14,.14)}
+.solution-wide{grid-row:span 2}.solution-visual{color:#fff;background:#111;padding:0!important}.solution-photo{position:absolute;inset:0;background-image:var(--photo);background-size:cover;background-position:center;transition:transform .7s ease,filter .7s ease;filter:saturate(.78)}.solution-visual:hover .solution-photo{transform:scale(1.045);filter:saturate(1)}
+.solution-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,11,17,.08),rgba(7,12,18,.28) 34%,rgba(7,12,18,.94) 100%)}.solution-wide .solution-shade{background:linear-gradient(90deg,rgba(7,12,18,.92) 0%,rgba(7,12,18,.6) 55%,rgba(7,12,18,.16) 100%)}
+.solution-grid-premium .solution-card>span{z-index:3;right:25px;top:22px;color:rgba(255,255,255,.62);font:700 11px Manrope,sans-serif;letter-spacing:.12em}.solution-clean>span{color:#b1a58e!important}
+.solution-content{position:absolute;z-index:2;left:30px;right:30px;bottom:30px}.solution-wide .solution-content{top:45px;bottom:45px;display:flex;flex-direction:column;justify-content:flex-end;max-width:72%}
+.solution-grid-premium small{display:block;font-size:9px;letter-spacing:.18em;font-weight:800;color:#d9b85e;margin-bottom:12px}.solution-grid-premium h3{font-size:29px;margin:0 0 12px;line-height:1.02}.solution-wide h3{font-size:48px}.solution-grid-premium p{font-size:12px;line-height:1.55;margin:0 0 22px;color:#777168}.solution-visual p{color:rgba(255,255,255,.76)}
+.solution-grid-premium a{position:static!important;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.02em}.solution-visual a{color:#fff!important}.solution-grid-premium a b{font-size:15px;color:#d9b85e}
+.solution-clean{background:rgba(255,255,255,.78)!important;display:flex;flex-direction:column;justify-content:flex-end;backdrop-filter:blur(8px)}.solution-clean:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.8),transparent 55%);pointer-events:none}.solution-clean>*{position:relative;z-index:1}.solution-symbol{position:absolute!important;top:28px;left:30px;width:46px;height:46px;border-radius:14px;border:1px solid #d8c9a7;display:grid;place-items:center;font:800 12px Manrope;color:#9c7a2f;background:#fffaf0;letter-spacing:.08em}
+.solution-tersu{grid-column:1/-1;height:230px!important;background:linear-gradient(120deg,#0c1722,#13283a 55%,#0d1823)!important;color:#fff;display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:35px;padding:34px 40px!important;overflow:hidden}.solution-tersu:before{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(77,145,207,.17);border-radius:50%;right:-100px;top:-210px;box-shadow:0 0 0 65px rgba(77,145,207,.035)}.solution-tersu>span{color:rgba(255,255,255,.5)!important}.tersu-mini{height:118px;background:rgba(255,255,255,.96);border-radius:22px;display:grid;place-items:center;padding:25px;position:relative;z-index:1}.tersu-mini img{max-width:100%;max-height:72px}.solution-tersu h3{font-size:31px;margin-bottom:8px}.solution-tersu p{color:#aeb9c3;margin:0;max-width:660px}.solution-tersu a{color:#111!important;background:#d9b85e;padding:14px 20px;border-radius:999px;white-space:nowrap;position:relative!important;z-index:2}.solution-tersu a b{color:#111}
+@media(max-width:980px){.solution-grid-premium{grid-template-columns:1fr 1fr;grid-auto-rows:340px}.solution-wide{grid-row:span 1;grid-column:1/-1}.solution-wide .solution-content{max-width:70%}.solution-tersu{grid-template-columns:130px 1fr;height:auto!important;min-height:240px!important}.solution-tersu>a{grid-column:2}}
+@media(max-width:640px){.solution-grid-premium{grid-template-columns:1fr;grid-auto-rows:auto}.solution-grid-premium .solution-card{height:340px}.solution-wide{grid-column:auto}.solution-wide .solution-content{max-width:none}.solution-wide h3{font-size:38px}.solution-tersu{height:auto!important;min-height:0!important;grid-template-columns:1fr;gap:20px}.tersu-mini{width:150px;height:95px}.solution-tersu>a{grid-column:auto;justify-self:start}}
+
+
+/* Gold Paper — destaque Lavanderia Premium v5 */
+.solution-laundry{
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 74% 18%,rgba(212,177,83,.18),transparent 34%),
+    radial-gradient(circle at 92% 44%,rgba(70,105,126,.20),transparent 32%),
+    linear-gradient(155deg,#0a0f13 0%,#111820 48%,#090d11 100%)!important;
+}
+.solution-laundry .solution-photo{
+  opacity:.14;
+  filter:grayscale(1) contrast(1.2) brightness(.72)!important;
+  mix-blend-mode:screen;
+  background-position:center 58%;
+}
+.solution-laundry .solution-shade{
+  background:
+    linear-gradient(180deg,rgba(6,11,15,.08) 0%,rgba(6,11,15,.30) 45%,rgba(6,11,15,.90) 69%,#080d11 100%)!important;
+}
+.solution-laundry:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.72) 48%,transparent 76%);
+  z-index:1;
+}
+.laundry-showcase{
+  position:absolute;
+  z-index:2;
+  left:34px;
+  right:34px;
+  top:30px;
+  height:305px;
+  border:1px solid rgba(226,200,120,.16);
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  backdrop-filter:blur(2px);
+  overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 22px 55px rgba(0,0,0,.12);
+}
+.laundry-showcase:before{
+  content:"";
+  position:absolute;
+  width:210px;
+  height:210px;
+  right:-74px;
+  top:-88px;
+  border:1px solid rgba(218,185,96,.19);
+  border-radius:50%;
+  box-shadow:0 0 0 34px rgba(218,185,96,.025),0 0 0 68px rgba(218,185,96,.018);
+}
+.laundry-eyebrow{
+  position:absolute;
+  top:20px;
+  left:22px;
+  font:800 8px/1 Manrope,sans-serif;
+  letter-spacing:.22em;
+  color:#d9b85e;
+}
+.laundry-machine-art{
+  position:absolute;
+  width:205px;
+  height:205px;
+  right:16px;
+  top:30px;
+  display:grid;
+  place-items:center;
+}
+.laundry-machine-art svg{
+  width:132px;
+  height:132px;
+  fill:none;
+  stroke:rgba(255,255,255,.72);
+  stroke-width:2.1;
+  filter:drop-shadow(0 12px 26px rgba(0,0,0,.28));
+}
+.laundry-machine-art .laundry-water{stroke:#d9b85e;stroke-width:3}
+.laundry-orbit{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(217,184,94,.28);
+}
+.laundry-orbit-one{width:172px;height:172px;animation:laundryPulse 4s ease-in-out infinite}
+.laundry-orbit-two{width:202px;height:202px;border-style:dashed;border-color:rgba(255,255,255,.12);animation:laundrySpin 18s linear infinite}
+.laundry-core{
+  position:absolute;
+  right:-1px;
+  bottom:-4px;
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#d9b85e,#aa8431);
+  color:#101214;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 14px 35px rgba(202,165,77,.24);
+  border:5px solid rgba(12,18,23,.95);
+}
+.laundry-core strong{font-family:Playfair Display,serif;font-size:25px;line-height:.9}
+.laundry-core small{font:800 6px/1.15 Manrope,sans-serif!important;letter-spacing:.06em!important;color:#242017!important;margin:5px 0 0!important;text-align:center;width:58px}
+.laundry-stages{
+  position:absolute;
+  left:22px;
+  top:56px;
+  display:grid;
+  gap:10px;
+  width:176px;
+}
+.laundry-stage{
+  display:grid;
+  grid-template-columns:33px 1fr;
+  align-items:center;
+  min-height:48px;
+  padding:7px 12px 7px 7px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(6,12,17,.54);
+  box-shadow:0 10px 26px rgba(0,0,0,.10);
+}
+.laundry-stage b{
+  width:30px;
+  height:30px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:rgba(217,184,94,.12);
+  color:#d9b85e;
+  font:800 9px Manrope,sans-serif;
+  border:1px solid rgba(217,184,94,.18);
+}
+.laundry-stage span{font:700 10px Manrope,sans-serif;color:rgba(255,255,255,.90);letter-spacing:.01em}
+.laundry-metric{
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:17px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.48);
+}
+.laundry-metric span{font:800 7px Manrope,sans-serif;letter-spacing:.18em;color:#d9b85e}
+.laundry-metric i{height:1px;background:linear-gradient(90deg,rgba(217,184,94,.55),rgba(255,255,255,.06))}
+.laundry-metric b{font:700 7px Manrope,sans-serif;letter-spacing:.10em;color:rgba(255,255,255,.48)}
+.solution-laundry .solution-content{z-index:3;max-width:84%;top:auto!important;bottom:38px!important}
+.solution-laundry .solution-content small{margin-bottom:9px}
+.solution-laundry .solution-content h3{font-size:45px}
+.solution-laundry .solution-content p{max-width:430px;margin-bottom:18px}
+@keyframes laundrySpin{to{transform:rotate(360deg)}}
+@keyframes laundryPulse{0%,100%{transform:scale(1);opacity:.45}50%{transform:scale(1.035);opacity:.9}}
+@media(max-width:980px){
+  .solution-laundry .laundry-showcase{left:auto;right:24px;top:26px;width:285px;height:285px;opacity:.72}
+  .solution-laundry .laundry-stages,.solution-laundry .laundry-metric,.solution-laundry .laundry-eyebrow{display:none}
+  .solution-laundry .laundry-machine-art{right:38px;top:37px}
+  .solution-laundry .solution-content{max-width:58%;bottom:28px!important}
+  .solution-laundry .solution-content h3{font-size:38px}
+}
+@media(max-width:640px){
+  .solution-laundry .laundry-showcase{right:-80px;top:22px;width:250px;height:245px;opacity:.28;border-color:rgba(226,200,120,.10)}
+  .solution-laundry .laundry-machine-art{right:24px;top:20px;transform:scale(.86)}
+  .solution-laundry .solution-content{max-width:none;left:24px;right:24px;bottom:24px!important}
+  .solution-laundry .solution-content h3{font-size:36px}
+  .solution-laundry .solution-content p{font-size:11px;max-width:88%}
+}
+@media(prefers-reduced-motion:reduce){.laundry-orbit-one,.laundry-orbit-two{animation:none}}

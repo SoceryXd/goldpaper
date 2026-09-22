@@ -9,3 +9,19 @@
 .premium-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 20px;font-size:13px;font-weight:800;text-decoration:none;transition:.3s;will-change:transform}.premium-btn:hover{transform:translateY(-2px)}.premium-btn-gold{background:linear-gradient(120deg,#b98e35,#f0d88b,#b98e35);background-size:200% 100%;color:#090b0e;box-shadow:0 12px 40px rgba(224,189,95,.2)}.premium-btn-gold:hover{background-position:100% 0;box-shadow:0 16px 50px rgba(224,189,95,.32)}.premium-btn-outline{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.055);color:white;backdrop-filter:blur(12px)}.premium-btn-outline:hover{border-color:rgba(224,189,95,.55);background:rgba(224,189,95,.08)}.premium-btn-dark{background:#0b0f15;color:#fff}
 .premium-feature{position:relative;overflow:hidden;border:1px solid rgba(33,28,16,.09);border-radius:24px;background:rgba(255,255,255,.66);padding:26px;box-shadow:0 18px 50px rgba(35,27,10,.055);backdrop-filter:blur(16px);transition:.35s}.premium-feature:before{content:"";position:absolute;inset:auto -30% -60% -30%;height:65%;background:radial-gradient(circle,rgba(224,189,95,.22),transparent 65%);opacity:0;transition:.35s}.premium-feature:hover{transform:translateY(-7px);box-shadow:0 28px 70px rgba(35,27,10,.10)}.premium-feature:hover:before{opacity:1}.premium-feature h3{position:relative;margin-top:30px;font-size:17px;font-weight:800}.premium-feature p{position:relative;margin-top:10px;font-size:13px;line-height:1.75;color:rgba(11,15,21,.55)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+/* ===== AJUSTE EXTRA — FUNDO UM POUCO MAIS CLARO (pedido do cliente) ===== */
+.hero{
+  background:
+    radial-gradient(circle at 74% 34%, rgba(226,200,120,.13) 0%, rgba(226,200,120,.06) 10%, rgba(18,44,86,.10) 24%, transparent 40%),
+    radial-gradient(circle at 88% 28%, rgba(26,56,104,.34) 0%, rgba(18,42,79,.22) 22%, transparent 50%),
+    linear-gradient(90deg,#06101d 0%,#0a1830 35%,#0f2345 68%,#0b1d37 100%) !important;
+}
+.hero:before{
+  background:linear-gradient(90deg,rgba(4,9,18,.28) 0%,rgba(4,9,18,.14) 42%,rgba(4,9,18,.04) 70%,transparent 100%) !important;
+}
+.solution-card.featured{background:linear-gradient(145deg,#12223b,#1a2d4b) !important;border-color:rgba(141,170,212,.18) !important}
+.solution-shade{background:linear-gradient(180deg,rgba(10,18,30,.06),rgba(11,22,36,.22) 34%,rgba(10,24,38,.84) 100%) !important}
+.solution-wide .solution-shade{background:linear-gradient(90deg,rgba(8,18,32,.88) 0%,rgba(9,24,42,.56) 55%,rgba(9,24,42,.14) 100%) !important}
+.solution-paper-card .solution-shade{background:linear-gradient(180deg,rgba(14,26,41,.06),rgba(16,33,54,.22) 34%,rgba(15,33,55,.74) 100%) !important}
+.solution-laundry .solution-shade{background:linear-gradient(90deg,rgba(8,18,31,.88) 0%,rgba(10,24,42,.54) 56%,rgba(10,24,42,.15) 100%) !important}

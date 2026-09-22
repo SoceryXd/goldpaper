@@ -709,3 +709,103 @@ img,video,canvas{max-width:100%;height:auto}
   .solution-tersu a{grid-column:2!important;justify-self:start!important;width:auto!important;max-width:100%!important;white-space:normal!important}
   .segment-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+
+/* ===== HERO MOBILE FINAL v3 — topo seguro em iPhone/iPad/Android ===== */
+@media (max-width: 767px){
+  .header{
+    padding-top:calc(10px + env(safe-area-inset-top));
+    padding-bottom:10px;
+  }
+  .nav-wrap{min-height:58px}
+  .hero{
+    min-height:auto!important;
+    padding-top:calc(104px + env(safe-area-inset-top))!important;
+    padding-bottom:52px!important;
+    overflow:hidden!important;
+  }
+  .hero-grid{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:34px!important;
+  }
+  .hero-copy{
+    position:relative!important;
+    z-index:6!important;
+    width:100%!important;
+    max-width:100%!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .hero-copy>*{max-width:100%}
+  .hero .eyebrow{font-size:10px;line-height:1.35;letter-spacing:.18em}
+  .premium-signature{margin-top:12px;max-width:100%;white-space:normal}
+  .hero h1{
+    font-size:clamp(38px,10.2vw,48px)!important;
+    line-height:.98!important;
+    margin:18px 0 20px!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  .hero-copy>p{
+    font-size:15px!important;
+    line-height:1.65!important;
+    margin:0!important;
+  }
+  .hero-actions{margin:28px 0 30px!important;gap:12px!important}
+  .hero-actions .btn{width:100%;min-height:52px;font-size:14px}
+  .hero-stats{
+    width:100%!important;
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;
+    padding-top:22px!important;
+  }
+  .hero-stats div{min-width:0}
+  .hero-stats strong{font-size:clamp(24px,8vw,32px)!important;line-height:1}
+  .hero-stats span{font-size:10px!important;line-height:1.35!important;margin-top:7px}
+  .hero-visual{
+    width:100%!important;
+    min-height:430px!important;
+    margin-top:4px!important;
+    overflow:visible!important;
+  }
+  .visual-main{
+    inset:22px 0 66px 0!important;
+    padding:28px 22px!important;
+    border-radius:28px!important;
+  }
+  .visual-main h3{font-size:clamp(29px,8vw,36px)!important}
+  .visual-main p{font-size:14px!important;line-height:1.55!important;padding-right:0!important}
+  .fc-1{right:0!important;top:0!important}
+  .fc-2{right:0!important;bottom:8px!important}
+  .fc-3{display:none!important}
+  .hero-rings{right:-360px!important;top:250px!important;opacity:.42!important}
+}
+
+@media (max-width: 430px){
+  .hero{padding-top:calc(98px + env(safe-area-inset-top))!important}
+  .hero h1{font-size:clamp(35px,10.5vw,43px)!important}
+  .hero-stats{gap:7px!important}
+  .hero-stats strong{font-size:27px!important}
+  .hero-stats span{font-size:9px!important}
+  .hero-visual{min-height:405px!important}
+  .visual-main{inset:18px 0 60px 0!important;padding:24px 18px!important}
+  .float-card{min-width:132px!important;max-width:46%!important}
+}
+
+@media (max-width: 360px){
+  .hero h1{font-size:34px!important}
+  .hero-copy>p{font-size:14px!important}
+  .hero-stats{grid-template-columns:1fr 1fr!important}
+  .hero-stats div:last-child{grid-column:1/-1}
+  .hero-visual{min-height:390px!important}
+}
+
+@media (min-width:768px) and (max-width:1099px){
+  .hero{padding-top:130px!important}
+  .hero-grid{align-items:start!important}
+  .hero-copy{min-width:0}
+  .hero h1{font-size:clamp(50px,7vw,68px)}
+  .hero-visual{min-height:470px}
+}

@@ -1,1 +1,4 @@
 RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://goldpaper.com.br%{REQUEST_URI} [L,R=301]

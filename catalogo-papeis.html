@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/favicon-goldpaper.png">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260922-v7">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260922-v9">
 </head>
 <body>
   <div class="noise"></div>
@@ -32,21 +32,50 @@
   </header>
 
   <main>
-    <section class="catalog-hero">
-      <div class="container catalog-hero-grid">
+    <section class="catalog-hero catalog-interactive-page">
+      <div class="container catalog-page-head">
         <div class="catalog-copy reveal">
           <span class="kicker">Papéis descartáveis</span>
-          <h1>Catálogo visual para <span>inspeção</span> rápida.</h1>
-          <p>Veja a lâmina com os principais itens da linha de papéis descartáveis Gold Paper. No computador ou no celular, você pode ampliar a visualização do navegador para inspecionar os produtos com mais detalhe.</p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="assets/images/catalogo-papeis-descartaveis.png" target="_blank" rel="noopener">Abrir imagem em tela cheia</a>
-            <a class="btn btn-dark" href="index.html#solucoes">Voltar para soluções</a>
-          </div>
+          <h1>Catálogo <span>interativo</span> Gold Paper.</h1>
+          <p>Explore os produtos diretamente na imagem. Use os controles para ampliar, arraste para navegar e toque nos produtos destacados para ver o nome e solicitar informações.</p>
         </div>
-        <div class="catalog-highlight reveal delay-1">
-          <div class="catalog-badge"><b>Catálogo</b><span>Papéis • acessórios</span></div>
-          <div class="catalog-frame">
-            <img src="assets/images/catalogo-papeis-descartaveis.png" alt="Catálogo Gold Paper de papéis descartáveis e acessórios">
+        <div class="catalog-actions reveal delay-1">
+          <a class="btn btn-dark" href="index.html#solucoes">← Voltar para soluções</a>
+          <a class="btn btn-gold" data-whatsapp href="#">Falar com o comercial</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="interactive-catalog reveal" id="interactiveCatalog">
+          <div class="catalog-toolbar" role="toolbar" aria-label="Controles do catálogo">
+            <div class="catalog-toolbar-copy"><b>Produtos e Acessórios</b><span>Toque nos produtos • arraste • amplie</span></div>
+            <div class="catalog-toolbar-buttons">
+              <button type="button" data-catalog-zoom="out" aria-label="Diminuir zoom">−</button>
+              <button type="button" data-catalog-zoom="reset" aria-label="Restaurar zoom"><span id="catalogZoomLabel">100%</span></button>
+              <button type="button" data-catalog-zoom="in" aria-label="Aumentar zoom">+</button>
+              <button type="button" data-catalog-fullscreen aria-label="Abrir em tela cheia">⛶</button>
+            </div>
+          </div>
+
+          <div class="catalog-stage" id="catalogStage" aria-label="Catálogo interativo Gold Paper">
+            <div class="catalog-canvas" id="catalogCanvas">
+              <img src="assets/images/catalogo-papeis-descartaveis.png" alt="Catálogo Gold Paper com papel toalha bobina e papel toalha interfolhado" draggable="false">
+              <button class="catalog-hotspot" style="--x:20%;--y:47%;" data-product="Papel toalha bobina Branco — 6x200 m" aria-label="Papel toalha bobina Branco — 6x200 m"></button>
+              <button class="catalog-hotspot" style="--x:50%;--y:47%;" data-product="Papel toalha bobina Luxo — 6x200 m" aria-label="Papel toalha bobina Luxo — 6x200 m"></button>
+              <button class="catalog-hotspot" style="--x:80%;--y:47%;" data-product="Papel toalha bobina 100% — 6x200 m" aria-label="Papel toalha bobina 100% — 6x200 m"></button>
+              <button class="catalog-hotspot" style="--x:20%;--y:84%;" data-product="Papel toalha interfolhado Branco" aria-label="Papel toalha interfolhado Branco"></button>
+              <button class="catalog-hotspot" style="--x:50%;--y:84%;" data-product="Papel toalha interfolhado Luxo" aria-label="Papel toalha interfolhado Luxo"></button>
+              <button class="catalog-hotspot" style="--x:80%;--y:84%;" data-product="Papel toalha interfolhado 100%" aria-label="Papel toalha interfolhado 100%"></button>
+            </div>
+          </div>
+
+          <div class="catalog-product-popover" id="catalogProductPopover" hidden>
+            <div>
+              <small>Produto selecionado</small>
+              <strong id="catalogProductName">Produto Gold Paper</strong>
+            </div>
+            <a class="btn btn-gold" id="catalogProductWhatsapp" target="_blank" rel="noopener">Consultar produto</a>
+            <button type="button" id="catalogProductClose" aria-label="Fechar">×</button>
           </div>
         </div>
       </div>
@@ -63,7 +92,39 @@
   </footer>
 
   <a class="whatsapp-float" data-whatsapp href="#" aria-label="Falar pelo WhatsApp">✆</a>
-  <script src="assets/js/config.js?v=20260922-resp4"></script>
-  <script src="assets/js/app.js?v=20260922-resp4"></script>
+  <script src="assets/js/config.js?v=20260922-v9"></script>
+  <script src="assets/js/app.js?v=20260922-v9"></script>
+
+  <script>
+  (()=>{
+    const stage=document.getElementById('catalogStage');
+    const canvas=document.getElementById('catalogCanvas');
+    const label=document.getElementById('catalogZoomLabel');
+    const pop=document.getElementById('catalogProductPopover');
+    const productName=document.getElementById('catalogProductName');
+    const productWhatsapp=document.getElementById('catalogProductWhatsapp');
+    const closeBtn=document.getElementById('catalogProductClose');
+    if(!stage||!canvas) return;
+    let scale=1,x=0,y=0,dragging=false,startX=0,startY=0,startPX=0,startPY=0;
+    const min=.75,max=2.5;
+    const apply=()=>{canvas.style.transform=`translate3d(${x}px,${y}px,0) scale(${scale})`;label.textContent=Math.round(scale*100)+'%';stage.classList.toggle('is-zoomed',scale>1.01)};
+    const setScale=(next)=>{const old=scale;scale=Math.max(min,Math.min(max,next));if(scale<=1){x=0;y=0}else{x=x*(scale/old);y=y*(scale/old)}apply()};
+    document.querySelectorAll('[data-catalog-zoom]').forEach(btn=>btn.addEventListener('click',()=>{const a=btn.dataset.catalogZoom;if(a==='in')setScale(scale+.25);if(a==='out')setScale(scale-.25);if(a==='reset'){scale=1;x=0;y=0;apply()}}));
+    document.querySelector('[data-catalog-fullscreen]')?.addEventListener('click',()=>{const el=document.getElementById('interactiveCatalog');if(!document.fullscreenElement) el.requestFullscreen?.(); else document.exitFullscreen?.()});
+    stage.addEventListener('wheel',e=>{if(!e.ctrlKey&&!e.metaKey) return;e.preventDefault();setScale(scale+(e.deltaY<0?.15:-.15))},{passive:false});
+    stage.addEventListener('pointerdown',e=>{if(e.target.closest('.catalog-hotspot'))return;if(scale<=1)return;dragging=true;stage.setPointerCapture(e.pointerId);startX=e.clientX;startY=e.clientY;startPX=x;startPY=y;stage.classList.add('is-dragging')});
+    stage.addEventListener('pointermove',e=>{if(!dragging)return;x=startPX+(e.clientX-startX);y=startPY+(e.clientY-startY);apply()});
+    const stop=()=>{dragging=false;stage.classList.remove('is-dragging')};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);
+    stage.addEventListener('dblclick',()=>setScale(scale>1.1?1:1.75));
+    document.querySelectorAll('.catalog-hotspot').forEach(h=>h.addEventListener('click',()=>{
+      const name=h.dataset.product||'Produto Gold Paper';productName.textContent=name;
+      const cfg=window.GOLDPAPER_CONFIG||{};const msg=`Olá! Vim pelo catálogo da Gold Paper e gostaria de informações sobre: ${name}.`;
+      productWhatsapp.href=`https://wa.me/${cfg.whatsapp||'5527998179289'}?text=${encodeURIComponent(msg)}`;
+      pop.hidden=false;
+    }));
+    closeBtn?.addEventListener('click',()=>pop.hidden=true);
+    apply();
+  })();
+  </script>
 </body>
 </html>

@@ -426,3 +426,168 @@
   .solution-laundry .solution-content p{font-size:11px;max-width:88%}
 }
 @media(prefers-reduced-motion:reduce){.laundry-orbit-one,.laundry-orbit-two{animation:none}}
+
+/* ===== RESPONSIVIDADE REFORÇADA — ALL DEVICES FIX ===== */
+@media (max-width: 920px){
+  .container{width:min(100% - 32px,1180px)}
+  .header{padding:12px 0}
+  .nav-wrap{gap:14px}
+  .hero{padding:118px 0 56px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-copy>p,.section-head>p,.lead{max-width:none}
+  .hero-actions{flex-wrap:wrap}
+  .hero-stats{gap:18px;flex-wrap:wrap}
+  .hero-visual{min-height:380px}
+  .visual-main{inset:18px 0 76px 0;padding:28px 24px;border-radius:30px}
+  .visual-main h3{font-size:30px}
+  .visual-main p{font-size:14px}
+  .float-card{min-width:150px;padding:12px 14px}
+  .fc-1{right:0;top:0}
+  .fc-2{right:0;bottom:12px}
+  .fc-3{left:0;bottom:96px}
+
+  .section{padding:68px 0}
+  .section-head{margin-bottom:30px;gap:14px}
+
+  .solution-grid,
+  .solution-grid-premium,
+  .segment-grid,
+  .process-grid,
+  .check-grid,
+  .quick-segments-grid,
+  .footer-grid{grid-template-columns:1fr !important}
+
+  .solution-grid-premium{grid-auto-rows:auto !important;gap:14px !important}
+  .solution-grid-premium .solution-card{height:auto !important;min-height:280px !important;padding:24px !important}
+  .solution-wide,.solution-tersu{grid-column:auto !important;grid-row:auto !important}
+  .solution-content{left:24px !important;right:24px !important;bottom:24px !important}
+  .solution-grid-premium h3{font-size:34px !important}
+  .solution-grid-premium p{font-size:13px !important;line-height:1.6 !important}
+
+  .solution-laundry{min-height:520px !important}
+  .solution-laundry .solution-photo{opacity:.14 !important;filter:grayscale(1) contrast(1.08) brightness(.74) !important;background-position:center center !important}
+  .solution-laundry .laundry-showcase{display:none !important}
+  .solution-laundry:before{
+    content:"";
+    position:absolute;
+    left:24px;
+    right:24px;
+    top:24px;
+    height:160px;
+    border-radius:22px;
+    background-image:
+      linear-gradient(180deg,rgba(10,14,18,.08),rgba(10,14,18,.55)),
+      var(--photo);
+    background-size:cover;
+    background-position:center;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 18px 40px rgba(0,0,0,.16);
+    z-index:2;
+  }
+  .solution-laundry .solution-content{
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    padding-top:180px !important;
+    max-width:none !important;
+    z-index:3 !important;
+  }
+  .solution-laundry .solution-content h3{font-size:34px !important}
+  .solution-laundry .solution-content p{max-width:none !important}
+
+  .solution-clean{
+    justify-content:flex-end !important;
+    min-height:250px !important;
+    background:
+      radial-gradient(circle at 88% 14%,rgba(217,184,94,.14),transparent 24%),
+      linear-gradient(145deg,rgba(255,255,255,.92),rgba(255,255,255,.72)) !important;
+  }
+  .solution-symbol{top:22px !important;left:22px !important;width:42px !important;height:42px !important}
+  .solution-clean h3{margin-top:42px !important}
+  .solution-clean p{max-width:none !important}
+
+  .solution-tersu{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    min-height:0 !important;
+    padding:26px !important;
+    height:auto !important;
+  }
+  .tersu-mini{width:min(180px,100%) !important;height:100px !important}
+  .solution-tersu h3{font-size:28px !important}
+  .solution-tersu a{width:100%;justify-content:center}
+
+  .segment-card,.balanced-segments .segment-card{height:280px !important}
+  .balanced-segments .segment-card > a,
+  .balanced-segments .segment-link{min-height:280px !important}
+  .process{min-height:0;padding:26px}
+  .about-visual{height:330px}
+  .tersu-logo-box{min-height:280px;padding:36px}
+  .faq-grid,.about-grid,.tersu-grid{grid-template-columns:1fr;gap:34px}
+  .cta-card{flex-direction:column;align-items:flex-start;padding:34px 26px;gap:28px}
+  .btn-large{min-width:0;width:100%}
+  .footer-bottom{flex-direction:column;gap:8px}
+}
+
+@media (max-width: 640px){
+  .container{width:min(100% - 24px,1180px)}
+  .brand-logo-shell{width:178px !important;min-width:178px !important;height:52px !important;padding:6px 8px !important}
+  .menu-btn{width:40px;height:40px}
+  .hero{padding:106px 0 48px}
+  .hero h1{font-size:42px}
+  .hero-copy>p{font-size:15px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-stats strong{font-size:24px}
+  .hero-visual{min-height:330px}
+  .visual-main{inset:12px 0 56px 0;padding:22px 18px;border-radius:24px}
+  .visual-main .mini-label{font-size:9px}
+  .visual-main h3{font-size:26px}
+  .visual-icon{font-size:48px;margin:24px 0 8px}
+  .float-card{min-width:124px;padding:10px 12px}
+  .float-card b{font-size:12px}
+  .float-card span{font-size:9px}
+  .fc-3{display:none}
+
+  .trust-strip{padding:14px 0}
+  .trust-grid{gap:18px;font-size:9px}
+  .section-head h2,.about-section h2,.tersu-section h2,.faq-section h2{font-size:34px}
+  .quick-segment-btn{grid-template-columns:1fr auto;align-items:flex-start}
+  .quick-num{width:40px;height:40px;font-size:11px}
+  .quick-segment-btn strong{font-size:16px}
+
+  .solution-grid-premium .solution-card{padding:22px !important;border-radius:22px !important}
+  .solution-grid-premium h3{font-size:30px !important}
+  .solution-laundry{min-height:490px !important}
+  .solution-laundry:before{left:22px;right:22px;top:22px;height:138px;border-radius:18px}
+  .solution-laundry .solution-content{padding-top:154px !important}
+  .solution-laundry .solution-content h3{font-size:30px !important}
+  .solution-clean{min-height:230px !important}
+  .solution-clean h3{font-size:28px !important}
+  .solution-content,.solution-laundry .solution-content{left:auto !important;right:auto !important}
+  .solution-tersu{padding:22px !important}
+  .solution-tersu h3{font-size:24px !important}
+  .solution-tersu a{padding:13px 18px !important}
+
+  .segment-card,.balanced-segments .segment-card{height:245px !important}
+  .balanced-segments .segment-card > a,
+  .balanced-segments .segment-link{min-height:245px !important;padding:22px !important}
+
+  .tersu-logo-box{min-height:220px;padding:24px}
+  .about-visual{height:280px;padding:24px}
+  .gold-frame{width:220px;height:220px}
+  .gold-frame strong{font-size:42px}
+  .faq-list p{max-width:none}
+  .cta-card h2{font-size:30px}
+  .whatsapp-float{width:54px;height:54px;right:14px;bottom:14px}
+}
+
+@media (max-width: 420px){
+  .hero h1{font-size:36px}
+  .hero-copy>p{font-size:14px}
+  .brand-logo-shell{width:164px !important;min-width:164px !important;height:48px !important}
+  .solution-grid-premium h3{font-size:27px !important}
+  .solution-laundry{min-height:470px !important}
+  .solution-laundry .solution-content h3{font-size:27px !important}
+  .solution-card a,.solution-grid-premium a{font-size:11px !important}
+}
